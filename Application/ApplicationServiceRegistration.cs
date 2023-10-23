@@ -32,7 +32,8 @@ namespace Application
             });
 
             //services.AddSingleton<LoggerServiceBase,FileLogger>();
-            services.AddSingleton<LoggerServiceBase, MsSqlLogger>();
+            //services.AddSingleton<LoggerServiceBase, MsSqlLogger>();
+            services.AddSingleton<LoggerServiceBase, ElasticsearchLogger>();
 
             return services;
         }
